@@ -34,6 +34,7 @@ window.addEventListener( 'load', () => {
         e.preventDefault();
 
         let roomName = document.querySelector( '#room-name' ).value;
+        let roomPass = document.querySelector( '#room-pass' ).value;
         let yourName = document.querySelector( '#your-name' ).value;
 
         if ( roomName && yourName ) {
@@ -52,6 +53,7 @@ window.addEventListener( 'load', () => {
 
             //empty the values
             document.querySelector( '#room-name' ).value = '';
+            document.querySelector( '#room-pass' ).value = '';
             document.querySelector( '#your-name' ).value = '';
         }
 
@@ -62,26 +64,28 @@ window.addEventListener( 'load', () => {
 
 
     //When the 'Enter room' button is clicked.
-    document.getElementById( 'enter-room' ).addEventListener( 'click', ( e ) => {
-        e.preventDefault();
 
-        let name = document.querySelector( '#username' ).value;
+      document.getElementById( 'enter-room' ).addEventListener( 'click', ( e ) => {
+          e.preventDefault();
 
-        if ( name ) {
-            //remove error message, if any
-            document.querySelector( '#err-msg-username' ).innerHTML = "";
+          let name = document.querySelector( '#username' ).value;
+          // let roomPin = document.querySelector('#room-pass').value;
+          if ( name ) {
+              //remove error message, if any
+              document.querySelector( '#err-msg-username' ).innerHTML = "";
 
-            //save the user's name in sessionStorage
-            sessionStorage.setItem( 'username', name );
+              //save the user's name in sessionStorage
+              sessionStorage.setItem( 'username', name );
 
-            //reload room
-            location.reload();
-        }
+              //reload room
+              location.reload();
+            }
 
-        else {
-            document.querySelector( '#err-msg-username' ).innerHTML = "Please input your name";
-        }
-    } );
+            else {
+              document.querySelector( '#err-msg-username' ).innerHTML = "Please input your name";
+            }
+          } );
+
 
 
     document.addEventListener( 'click', ( e ) => {
