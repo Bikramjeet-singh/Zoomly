@@ -20,7 +20,7 @@ To run the file:-
 
 1.Just clone the code.
 
-2. Make your account on "xirsys" and update the credentials in the settings.py file.
+2.Make your account on "xirsys" and update the credentials in the settings.py file.
 
 3.npm install to install the dependencies.
 
